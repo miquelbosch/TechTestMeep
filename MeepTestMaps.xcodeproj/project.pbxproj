@@ -28,6 +28,8 @@
 		6F6B9D1622CE4F390052BAD0 /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1522CE4F390052BAD0 /* MapScreenViewModel.swift */; };
 		6F6B9D1822CE4F5F0052BAD0 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1722CE4F5F0052BAD0 /* LocationInfo.swift */; };
 		6F6B9D1B22CE508E0052BAD0 /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */; };
+		6F6B9D1D22CE518D0052BAD0 /* TransportsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1C22CE518D0052BAD0 /* TransportsApi.swift */; };
+		6F6B9D2022CE53BA0052BAD0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1F22CE53BA0052BAD0 /* Enums.swift */; };
 		7813147A54E05A45712FDBE6 /* Pods_MeepTestMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7005EBFBE7BAB98B0E7E02EF /* Pods_MeepTestMaps.framework */; };
 		C53D9A8020EC1239ABA710FB /* Pods_MeepTestMapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA36A5620A10502F3BB23B0 /* Pods_MeepTestMapsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		6F6B9D1522CE4F390052BAD0 /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
 		6F6B9D1722CE4F5F0052BAD0 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 		6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
+		6F6B9D1C22CE518D0052BAD0 /* TransportsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApi.swift; sourceTree = "<group>"; };
+		6F6B9D1F22CE53BA0052BAD0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		7005EBFBE7BAB98B0E7E02EF /* Pods_MeepTestMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeepTestMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79204F6D88A355A8ED25E28B /* Pods-MeepTestMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		7EA36A5620A10502F3BB23B0 /* Pods_MeepTestMapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeepTestMapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +245,7 @@
 		6F6B9CFC22CE47E60052BAD0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6F6B9D1E22CE53AA0052BAD0 /* Enum */,
 				6F6B9CFE22CE47F00052BAD0 /* Protocols */,
 				6F6B9CFD22CE47EA0052BAD0 /* Extensions */,
 			);
@@ -286,8 +291,17 @@
 			isa = PBXGroup;
 			children = (
 				6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */,
+				6F6B9D1C22CE518D0052BAD0 /* TransportsApi.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6F6B9D1E22CE53AA0052BAD0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D1F22CE53BA0052BAD0 /* Enums.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		9864CC8390620616CE14A192 /* Frameworks */ = {
@@ -612,9 +626,11 @@
 				6F6B9CCB22CE46680052BAD0 /* ViewController.swift in Sources */,
 				6F6B9D0E22CE4A5A0052BAD0 /* MapView.swift in Sources */,
 				6F6B9D1B22CE508E0052BAD0 /* ServicesManager.swift in Sources */,
+				6F6B9D2022CE53BA0052BAD0 /* Enums.swift in Sources */,
 				6F6B9CC922CE46680052BAD0 /* AppDelegate.swift in Sources */,
 				6F6B9D0022CE48080052BAD0 /* UIColor+extensions.swift in Sources */,
 				6F6B9D0422CE48510052BAD0 /* BaseNavigationController.swift in Sources */,
+				6F6B9D1D22CE518D0052BAD0 /* TransportsApi.swift in Sources */,
 				6F6B9D1622CE4F390052BAD0 /* MapScreenViewModel.swift in Sources */,
 				6F6B9D0B22CE49280052BAD0 /* Constants.swift in Sources */,
 				6F6B9D0222CE482E0052BAD0 /* Protocols.swift in Sources */,
@@ -798,7 +814,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMaps/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -814,7 +833,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMaps/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -831,7 +853,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMapsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -849,7 +875,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMapsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -866,7 +896,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMapsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -883,7 +917,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MGZ93L9RY;
 				INFOPLIST_FILE = MeepTestMapsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

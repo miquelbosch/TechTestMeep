@@ -10,9 +10,16 @@ import Foundation
 import RxSwift
 
 class MapScreenViewModel {
+  private var networkManager = NetworkManager()
   public var tableDataList = PublishSubject<[LocationInfo]>()
   
+  
   public func fetchTransportList() {
-    
+    networkManager.getTransportMarkers(success: { jsonResponse in
+      //Pintar mapa
+      
+    }) { errorType in
+      // pintar error
+    }
   }
 }

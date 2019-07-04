@@ -15,6 +15,25 @@ protocol ServiceManager {
   var provider: MoyaProvider<T> { get }
 }
 
-struct NetworkManager: Network {
-  let provider = MoyaProvider<WeatherApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
+struct NetworkManager: ServiceManager {
+  let provider = MoyaProvider<TransportsApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
+  
+  func getTransportMarkers(success scxd: @escaping (JSON)->(),
+                           failure fail: @escaping (ErrorType)->()) {
+    provider.request(.transport) { result in
+      switch result {
+      case let .success(response):
+        let data = response.data
+        guard let swiftyJSON = JSON(rawValue: data) else {
+            fail(.genericError)
+            return
+        }
+        scxd(swiftyJSON)
+      case .failure:
+        fail(.serverError)
+      }
+    }
+  }
+  
+  
 }
