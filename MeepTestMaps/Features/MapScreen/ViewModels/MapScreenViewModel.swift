@@ -16,12 +16,18 @@ class MapScreenViewModel {
   lazy var loadingObservable: Observable<LoadingType> = self.loadingManager.asObservable()
   
   
+
+  
+  
+  
+  
   public func fetchTransportList() {
     print(loadingManager)
     self.loadingManager.onNext(.loadingOn)
     networkManager.getTransportMarkers(success: { jsonResponse in
       //Pintar mapa
       self.loadingManager.onNext(.loadingOff)
+      self.tableDataList.onNext(jsonResponse)
       
     }) { errorType in
       // pintar error

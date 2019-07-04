@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 import SwiftyJSON
+import GoogleMaps
 
 protocol ServiceManager {
   associatedtype T: TargetType
@@ -18,7 +19,7 @@ protocol ServiceManager {
 struct NetworkManager: ServiceManager {
   let provider = MoyaProvider<TransportsApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
   
-  func getTransportMarkers(success scxd: @escaping (JSON)->(),
+  func getTransportMarkers(success scxd: @escaping ([LocationInfo])->(),
                            failure fail: @escaping (ErrorType)->()) {
     provider.request(.transport) { result in
       switch result {
@@ -28,12 +29,29 @@ struct NetworkManager: ServiceManager {
             fail(.genericError)
             return
         }
-        scxd(swiftyJSON)
+        
+        scxd(self.mapList(swiftyJSON))
       case .failure:
         fail(.serverError)
       }
     }
   }
   
-  
+  private func mapList(_ json: JSON) -> [LocationInfo] {
+    var result = [LocationInfo]()
+    for (_, object) in json {
+      let id = object["id"].stringValue
+      let lon = object["x"].doubleValue
+      let lat = object["y"].doubleValue
+      let name = object["name"].stringValue
+      let model = object["model"].stringValue
+      let companyZoneId = object["companyZoneId"].intValue
+      let position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+      let maker = GMSMarker(position: position)
+      
+      let new = LocationInfo(id: id, companyZoneId: companyZoneId, name: name, model: model, maker: maker)
+      result.append(new)
+    }
+    return result
+  }
 }

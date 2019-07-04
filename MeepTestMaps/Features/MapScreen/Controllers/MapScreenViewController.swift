@@ -14,6 +14,7 @@ import RxCocoa
 class MapScreenViewController: UIViewController, LoadViewProtocol {
   var mapScreenViewModel = MapScreenViewModel()
   var disposeBag =  DisposeBag()
+  var mapDelegate: MapView?
   
   public let loadingManager = PublishSubject<LoadingType>()
   
@@ -38,6 +39,15 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
         }
       ).disposed(by: disposeBag)
     
+    mapScreenViewModel
+      .tableDataList
+      .subscribe(onNext: { [weak self] list in
+        
+        guard let map = self, let mapDel = map.mapDelegate else { return }
+        mapDel.setMakers(list)
+        print("CANvi a la llista - \(String(describing: mapDel.hola))")
+      }).disposed(by: disposeBag)
+    
     
     
     
@@ -53,9 +63,12 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
   }
   
   func showMap() {
-    if let mapView = self.loadView("MapView") {
+    if let mapView = self.loadView("MapView") as? MapView {
       self.view.addSubview(mapView)
       //containerView = mapView
+      
+      mapDelegate = mapView
+      
       
       mapView.translatesAutoresizingMaskIntoConstraints = false
       
