@@ -43,13 +43,8 @@ class MapView: UIView {
     
     for element in uniqueId {
       dictColors[element] = GMSMarker.markerImage(with: Constants.makerColors[count])
-        
-        //Constants.makerColors[count]
       count += 1
     }
     return dictColors
   }
-  
-
-
 }
