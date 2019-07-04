@@ -9,8 +9,26 @@
 import UIKit
 
 class ErrorView: UIView {
+  @IBOutlet weak var lblError: UILabel!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
   }
+  
+  func setErrorDescription(_ error: ErrorType) {
+    var errorText = ""
+
+    switch error {
+    case .genericError:
+      errorText = "Generic Error"
+    case .noConnection:
+      errorText = "No Connection"
+    case .serverError:
+      errorText = "Server Error"
+    }
+    
+    lblError.text = errorText
+  }
+  
 }

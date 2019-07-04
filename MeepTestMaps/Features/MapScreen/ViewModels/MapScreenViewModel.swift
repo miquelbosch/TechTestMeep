@@ -15,18 +15,17 @@ class MapScreenViewModel {
   public var tableDataList = PublishSubject<[LocationInfo]>()
   public let loadingManager = PublishSubject<LoadingType>()
   lazy var loadingObservable: Observable<LoadingType> = self.loadingManager.asObservable()
+  public let errorManager = PublishSubject<ErrorType>()
   
   public func fetchTransportList() {
-    print(loadingManager)
     self.loadingManager.onNext(.loadingOn)
     networkManager.getTransportMarkers(success: { jsonResponse in
-      //Pintar mapa
       self.loadingManager.onNext(.loadingOff)
       self.tableDataList.onNext(jsonResponse)
       
     }) { errorType in
-      // pintar error
       self.loadingManager.onNext(.loadingOff)
+      self.errorManager.onNext(.serverError)
     }
   }
 }

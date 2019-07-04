@@ -15,10 +15,46 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorView" customModule="MeepTestMaps" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="503"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.071824634750000005" blue="0.1091741977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="19o-zB-4k0">
+                    <rect key="frame" x="67.5" y="162.5" width="240" height="198.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="il_error_carga" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-0M-roB">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="154"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="154" id="OC3-jd-GF6"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmA-X5-ydr">
+                            <rect key="frame" x="0.0" y="178" width="240" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DmA-X5-ydr" firstAttribute="leading" secondItem="19o-zB-4k0" secondAttribute="leading" id="7vn-HE-P0a"/>
+                        <constraint firstAttribute="bottom" secondItem="DmA-X5-ydr" secondAttribute="bottom" id="IDq-Op-ROV"/>
+                        <constraint firstAttribute="width" constant="240" id="InG-bZ-LAZ"/>
+                        <constraint firstAttribute="trailing" secondItem="DmA-X5-ydr" secondAttribute="trailing" id="STb-Br-fnQ"/>
+                        <constraint firstItem="jGv-0M-roB" firstAttribute="leading" secondItem="19o-zB-4k0" secondAttribute="leading" id="nb9-iB-cAy"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="19o-zB-4k0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="2lo-EC-kYJ"/>
+                <constraint firstItem="19o-zB-4k0" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="7Tm-az-E2j"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblError" destination="DmA-X5-ydr" id="vwr-DX-tuy"/>
+            </connections>
             <point key="canvasLocation" x="53.600000000000001" y="-25.637181409295355"/>
         </view>
     </objects>
+    <resources>
+        <image name="il_error_carga" width="78" height="78"/>
+    </resources>
 </document>

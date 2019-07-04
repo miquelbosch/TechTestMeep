@@ -33,8 +33,7 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
           self.showLoading()
         }else {
           self.hideLoading()
-        }
-        }
+        }}
       ).disposed(by: disposeBag)
     
     mapScreenViewModel
@@ -44,7 +43,12 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
         mapDel.setMakers(list)
       }).disposed(by: disposeBag)
     
-    
+    mapScreenViewModel
+      .errorManager
+      .subscribe(onNext: { [unowned self] error in
+        self.showError(error)
+        }
+      ).disposed(by: disposeBag)
   }
   
   func showLoading() {
@@ -63,10 +67,11 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
     }
   }
   
-  func showError() {
-    if let mapView = self.loadView("ErrorView") as? ErrorView {
-      self.view.addSubview(mapView)
-      mapView.constraintToSuperView(self.view)
+  func showError(_ errorType: ErrorType) {
+    if let errorView = self.loadView("ErrorView") as? ErrorView {
+      self.view.addSubview(errorView)
+      errorView.constraintToSuperView(self.view)
+      errorView.setErrorDescription(errorType)
     }
   }
 }
