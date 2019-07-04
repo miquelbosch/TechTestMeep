@@ -45,13 +45,7 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
         
         guard let map = self, let mapDel = map.mapDelegate else { return }
         mapDel.setMakers(list)
-        print("CANvi a la llista - \(String(describing: mapDel.hola))")
       }).disposed(by: disposeBag)
-    
-    
-    
-    
-    
   }
   
   func showLoading() {

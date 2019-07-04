@@ -11,9 +11,7 @@ import GoogleMaps
 
 class MapView: UIView {
   @IBOutlet weak var mapView: GMSMapView!
-  
-  var hola = "que tal"
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     initialPosition()
@@ -25,7 +23,35 @@ class MapView: UIView {
   }
   
   public func setMakers(_ list: [LocationInfo]) {
-    list.map {  $0.maker.map = mapView
+    var dictColors = [Int: UIColor]()
+    var count = 0
+    let totalGroups = list.map{ $0.companyZoneId }
+    let unique = Array(Set(totalGroups))
+    
+    for element in unique {
+      dictColors[element] = Constants.makerColors[count]
+      count += 1
+    }
+    
+    _ = list.map {  $0.maker.map = mapView
+      $0.maker.icon = GMSMarker.markerImage(with: dictColors[$0.companyZoneId])
+    }
+  }
+  
+  private func createDictColors(_ list: [LocationInfo]) {
+    var dictColors = [Int: UIColor]()
+    var count = 0
+    let totalGroups = list.map{ $0.companyZoneId }
+    
+    var uniqueId = Array(Set(totalGroups))
+    
+    uniqueId.sort { (element1, element2) -> Bool in
+      element1 < element2
+    }
+    
+    for element in uniqueId {
+      dictColors[element] = Constants.makerColors[count]
+      count += 1
     }
   }
 

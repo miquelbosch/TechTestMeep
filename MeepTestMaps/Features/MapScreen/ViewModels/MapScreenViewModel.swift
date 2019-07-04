@@ -8,18 +8,13 @@
 
 import Foundation
 import RxSwift
+import GoogleMaps
 
 class MapScreenViewModel {
   private var networkManager = NetworkManager()
   public var tableDataList = PublishSubject<[LocationInfo]>()
   public let loadingManager = PublishSubject<LoadingType>()
   lazy var loadingObservable: Observable<LoadingType> = self.loadingManager.asObservable()
-  
-  
-
-  
-  
-  
   
   public func fetchTransportList() {
     print(loadingManager)
