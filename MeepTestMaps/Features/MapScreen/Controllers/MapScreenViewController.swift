@@ -23,11 +23,9 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
     bindObjects()
     showMap()
     mapScreenViewModel.fetchTransportList()
-    
   }
   
   func bindObjects() {
-    
     mapScreenViewModel
       .loadingObservable
       .subscribe(onNext: { [unowned self] haveToShow in
@@ -42,10 +40,11 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
     mapScreenViewModel
       .tableDataList
       .subscribe(onNext: { [weak self] list in
-        
         guard let map = self, let mapDel = map.mapDelegate else { return }
         mapDel.setMakers(list)
       }).disposed(by: disposeBag)
+    
+    
   }
   
   func showLoading() {
@@ -59,17 +58,15 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
   func showMap() {
     if let mapView = self.loadView("MapView") as? MapView {
       self.view.addSubview(mapView)
-      //containerView = mapView
-      
       mapDelegate = mapView
-      
-      
-      mapView.translatesAutoresizingMaskIntoConstraints = false
-      
-      mapView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-      mapView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-      mapView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-      mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+      mapView.constraintToSuperView(self.view)
+    }
+  }
+  
+  func showError() {
+    if let mapView = self.loadView("ErrorView") as? ErrorView {
+      self.view.addSubview(mapView)
+      mapView.constraintToSuperView(self.view)
     }
   }
 }

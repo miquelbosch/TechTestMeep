@@ -23,23 +23,15 @@ class MapView: UIView {
   }
   
   public func setMakers(_ list: [LocationInfo]) {
-    var dictColors = [Int: UIColor]()
-    var count = 0
-    let totalGroups = list.map{ $0.companyZoneId }
-    let unique = Array(Set(totalGroups))
-    
-    for element in unique {
-      dictColors[element] = Constants.makerColors[count]
-      count += 1
-    }
+    var dictColors = createDictColors(list)
     
     _ = list.map {  $0.maker.map = mapView
-      $0.maker.icon = GMSMarker.markerImage(with: dictColors[$0.companyZoneId])
+      $0.maker.icon =  dictColors[$0.companyZoneId]
     }
   }
   
-  private func createDictColors(_ list: [LocationInfo]) {
-    var dictColors = [Int: UIColor]()
+  private func createDictColors(_ list: [LocationInfo]) -> [Int: UIImage] {
+    var dictColors = [Int: UIImage]()
     var count = 0
     let totalGroups = list.map{ $0.companyZoneId }
     
@@ -50,9 +42,14 @@ class MapView: UIView {
     }
     
     for element in uniqueId {
-      dictColors[element] = Constants.makerColors[count]
+      dictColors[element] = GMSMarker.markerImage(with: Constants.makerColors[count])
+        
+        //Constants.makerColors[count]
       count += 1
     }
+    return dictColors
   }
+  
+
 
 }
