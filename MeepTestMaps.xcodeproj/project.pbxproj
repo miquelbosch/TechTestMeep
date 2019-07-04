@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4757C673DC2084DC9E367EE5 /* Pods_MeepTestMapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DAFB2FFC5866D8AE13069E /* Pods_MeepTestMapsTests.framework */; };
+		6F6B9CC922CE46680052BAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9CC822CE46680052BAD0 /* AppDelegate.swift */; };
+		6F6B9CCB22CE46680052BAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9CCA22CE46680052BAD0 /* ViewController.swift */; };
+		6F6B9CCE22CE46680052BAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9CCC22CE46680052BAD0 /* Main.storyboard */; };
+		6F6B9CD022CE466A0052BAD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9CCF22CE466A0052BAD0 /* Assets.xcassets */; };
+		6F6B9CD322CE466A0052BAD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9CD122CE466A0052BAD0 /* LaunchScreen.storyboard */; };
+		6F6B9CDE22CE466A0052BAD0 /* MeepTestMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9CDD22CE466A0052BAD0 /* MeepTestMapsTests.swift */; };
+		6F6B9CE922CE466A0052BAD0 /* MeepTestMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9CE822CE466A0052BAD0 /* MeepTestMapsUITests.swift */; };
+		6F6B9D0022CE48080052BAD0 /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9CFF22CE48080052BAD0 /* UIColor+extensions.swift */; };
+		6F6B9D0222CE482E0052BAD0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0122CE482E0052BAD0 /* Protocols.swift */; };
+		6F6B9D0422CE48510052BAD0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0322CE48510052BAD0 /* BaseNavigationController.swift */; };
+		6F6B9D0722CE48CA0052BAD0 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0522CE48CA0052BAD0 /* MapScreenViewController.swift */; };
+		6F6B9D0822CE48CA0052BAD0 /* MapScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0622CE48CA0052BAD0 /* MapScreenViewController.xib */; };
+		6F6B9D0B22CE49280052BAD0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0A22CE49280052BAD0 /* Constants.swift */; };
+		6F6B9D0E22CE4A5A0052BAD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0D22CE4A5A0052BAD0 /* MapView.swift */; };
+		6F6B9D1022CE4A650052BAD0 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9D0F22CE4A650052BAD0 /* MapView.xib */; };
+		6F6B9D1222CE4A780052BAD0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1122CE4A780052BAD0 /* ErrorView.swift */; };
+		6F6B9D1422CE4A820052BAD0 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1322CE4A820052BAD0 /* ErrorView.xib */; };
+		6F6B9D1622CE4F390052BAD0 /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1522CE4F390052BAD0 /* MapScreenViewModel.swift */; };
+		6F6B9D1822CE4F5F0052BAD0 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1722CE4F5F0052BAD0 /* LocationInfo.swift */; };
+		6F6B9D1B22CE508E0052BAD0 /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */; };
+		7813147A54E05A45712FDBE6 /* Pods_MeepTestMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7005EBFBE7BAB98B0E7E02EF /* Pods_MeepTestMaps.framework */; };
+		C53D9A8020EC1239ABA710FB /* Pods_MeepTestMapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA36A5620A10502F3BB23B0 /* Pods_MeepTestMapsUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F6B9CDA22CE466A0052BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F6B9CBD22CE46680052BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6B9CC422CE46680052BAD0;
+			remoteInfo = MeepTestMaps;
+		};
+		6F6B9CE522CE466A0052BAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F6B9CBD22CE46680052BAD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6B9CC422CE46680052BAD0;
+			remoteInfo = MeepTestMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4728B1B6D5725F30B565EF54 /* Pods-MeepTestMapsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMapsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMapsUITests/Pods-MeepTestMapsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51DAFB2FFC5866D8AE13069E /* Pods_MeepTestMapsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeepTestMapsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2A45CCE992B06500D181BF /* Pods-MeepTestMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps.release.xcconfig"; sourceTree = "<group>"; };
+		6F6B9CC522CE46680052BAD0 /* MeepTestMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeepTestMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6B9CC822CE46680052BAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F6B9CCA22CE46680052BAD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F6B9CCD22CE46680052BAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F6B9CCF22CE466A0052BAD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F6B9CD222CE466A0052BAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F6B9CD422CE466A0052BAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F6B9CD922CE466A0052BAD0 /* MeepTestMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeepTestMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6B9CDD22CE466A0052BAD0 /* MeepTestMapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepTestMapsTests.swift; sourceTree = "<group>"; };
+		6F6B9CDF22CE466A0052BAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F6B9CE422CE466A0052BAD0 /* MeepTestMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeepTestMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6B9CE822CE466A0052BAD0 /* MeepTestMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepTestMapsUITests.swift; sourceTree = "<group>"; };
+		6F6B9CEA22CE466A0052BAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F6B9CFF22CE48080052BAD0 /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
+		6F6B9D0122CE482E0052BAD0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		6F6B9D0322CE48510052BAD0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		6F6B9D0522CE48CA0052BAD0 /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
+		6F6B9D0622CE48CA0052BAD0 /* MapScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenViewController.xib; sourceTree = "<group>"; };
+		6F6B9D0A22CE49280052BAD0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F6B9D0D22CE4A5A0052BAD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		6F6B9D0F22CE4A650052BAD0 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		6F6B9D1122CE4A780052BAD0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		6F6B9D1322CE4A820052BAD0 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		6F6B9D1522CE4F390052BAD0 /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
+		6F6B9D1722CE4F5F0052BAD0 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
+		6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
+		7005EBFBE7BAB98B0E7E02EF /* Pods_MeepTestMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeepTestMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79204F6D88A355A8ED25E28B /* Pods-MeepTestMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		7EA36A5620A10502F3BB23B0 /* Pods_MeepTestMapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeepTestMapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6064933DC1EC8AC549CEB6E /* Pods-MeepTestMapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMapsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMapsTests/Pods-MeepTestMapsTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8F3339BD9DEF44AA7745A91 /* Pods-MeepTestMapsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMapsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMapsTests/Pods-MeepTestMapsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6999A777638BD988F73637B /* Pods-MeepTestMapsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeepTestMapsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeepTestMapsUITests/Pods-MeepTestMapsUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F6B9CC222CE46680052BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7813147A54E05A45712FDBE6 /* Pods_MeepTestMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CD622CE466A0052BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4757C673DC2084DC9E367EE5 /* Pods_MeepTestMapsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CE122CE466A0052BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C53D9A8020EC1239ABA710FB /* Pods_MeepTestMapsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FD33B73A9D53AAFF183AA2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79204F6D88A355A8ED25E28B /* Pods-MeepTestMaps.debug.xcconfig */,
+				5C2A45CCE992B06500D181BF /* Pods-MeepTestMaps.release.xcconfig */,
+				D8F3339BD9DEF44AA7745A91 /* Pods-MeepTestMapsTests.debug.xcconfig */,
+				B6064933DC1EC8AC549CEB6E /* Pods-MeepTestMapsTests.release.xcconfig */,
+				4728B1B6D5725F30B565EF54 /* Pods-MeepTestMapsUITests.debug.xcconfig */,
+				E6999A777638BD988F73637B /* Pods-MeepTestMapsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F6B9CBC22CE46680052BAD0 = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CC722CE46680052BAD0 /* MeepTestMaps */,
+				6F6B9CDC22CE466A0052BAD0 /* MeepTestMapsTests */,
+				6F6B9CE722CE466A0052BAD0 /* MeepTestMapsUITests */,
+				6F6B9CC622CE46680052BAD0 /* Products */,
+				5FD33B73A9D53AAFF183AA2A /* Pods */,
+				9864CC8390620616CE14A192 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6F6B9CC622CE46680052BAD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CC522CE46680052BAD0 /* MeepTestMaps.app */,
+				6F6B9CD922CE466A0052BAD0 /* MeepTestMapsTests.xctest */,
+				6F6B9CE422CE466A0052BAD0 /* MeepTestMapsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F6B9CC722CE46680052BAD0 /* MeepTestMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D1922CE50710052BAD0 /* Services */,
+				6F6B9D0922CE491A0052BAD0 /* Utils */,
+				6F6B9CFC22CE47E60052BAD0 /* Common */,
+				6F6B9CF622CE477D0052BAD0 /* Features */,
+				6F6B9CC822CE46680052BAD0 /* AppDelegate.swift */,
+				6F6B9CCA22CE46680052BAD0 /* ViewController.swift */,
+				6F6B9CCC22CE46680052BAD0 /* Main.storyboard */,
+				6F6B9CCF22CE466A0052BAD0 /* Assets.xcassets */,
+				6F6B9CD122CE466A0052BAD0 /* LaunchScreen.storyboard */,
+				6F6B9CD422CE466A0052BAD0 /* Info.plist */,
+			);
+			path = MeepTestMaps;
+			sourceTree = "<group>";
+		};
+		6F6B9CDC22CE466A0052BAD0 /* MeepTestMapsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CDD22CE466A0052BAD0 /* MeepTestMapsTests.swift */,
+				6F6B9CDF22CE466A0052BAD0 /* Info.plist */,
+			);
+			path = MeepTestMapsTests;
+			sourceTree = "<group>";
+		};
+		6F6B9CE722CE466A0052BAD0 /* MeepTestMapsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CE822CE466A0052BAD0 /* MeepTestMapsUITests.swift */,
+				6F6B9CEA22CE466A0052BAD0 /* Info.plist */,
+			);
+			path = MeepTestMapsUITests;
+			sourceTree = "<group>";
+		};
+		6F6B9CF622CE477D0052BAD0 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CF822CE47A90052BAD0 /* MapScreen */,
+				6F6B9CF722CE47970052BAD0 /* BaseNaviogation */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6F6B9CF722CE47970052BAD0 /* BaseNaviogation */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D0322CE48510052BAD0 /* BaseNavigationController.swift */,
+			);
+			path = BaseNaviogation;
+			sourceTree = "<group>";
+		};
+		6F6B9CF822CE47A90052BAD0 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CFB22CE47C80052BAD0 /* Models */,
+				6F6B9CFA22CE47C20052BAD0 /* ViewModels */,
+				6F6B9CF922CE47BA0052BAD0 /* Controllers */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		6F6B9CF922CE47BA0052BAD0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D0C22CE4A300052BAD0 /* Views */,
+				6F6B9D0522CE48CA0052BAD0 /* MapScreenViewController.swift */,
+				6F6B9D0622CE48CA0052BAD0 /* MapScreenViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F6B9CFA22CE47C20052BAD0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D1522CE4F390052BAD0 /* MapScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6F6B9CFB22CE47C80052BAD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D1722CE4F5F0052BAD0 /* LocationInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F6B9CFC22CE47E60052BAD0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CFE22CE47F00052BAD0 /* Protocols */,
+				6F6B9CFD22CE47EA0052BAD0 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6F6B9CFD22CE47EA0052BAD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9CFF22CE48080052BAD0 /* UIColor+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F6B9CFE22CE47F00052BAD0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D0122CE482E0052BAD0 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6F6B9D0922CE491A0052BAD0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D0A22CE49280052BAD0 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6F6B9D0C22CE4A300052BAD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D0D22CE4A5A0052BAD0 /* MapView.swift */,
+				6F6B9D0F22CE4A650052BAD0 /* MapView.xib */,
+				6F6B9D1122CE4A780052BAD0 /* ErrorView.swift */,
+				6F6B9D1322CE4A820052BAD0 /* ErrorView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F6B9D1922CE50710052BAD0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B9D1A22CE508E0052BAD0 /* ServicesManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9864CC8390620616CE14A192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7005EBFBE7BAB98B0E7E02EF /* Pods_MeepTestMaps.framework */,
+				51DAFB2FFC5866D8AE13069E /* Pods_MeepTestMapsTests.framework */,
+				7EA36A5620A10502F3BB23B0 /* Pods_MeepTestMapsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F6B9CC422CE46680052BAD0 /* MeepTestMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6B9CED22CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMaps" */;
+			buildPhases = (
+				E49E979224ACB9B133F4D90E /* [CP] Check Pods Manifest.lock */,
+				6F6B9CC122CE46680052BAD0 /* Sources */,
+				6F6B9CC222CE46680052BAD0 /* Frameworks */,
+				6F6B9CC322CE46680052BAD0 /* Resources */,
+				477255C3CC7887E3EFCFFFBD /* [CP] Embed Pods Frameworks */,
+				D7B69151BE668D92B5C6A256 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeepTestMaps;
+			productName = MeepTestMaps;
+			productReference = 6F6B9CC522CE46680052BAD0 /* MeepTestMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F6B9CD822CE466A0052BAD0 /* MeepTestMapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6B9CF022CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMapsTests" */;
+			buildPhases = (
+				065AB80A2A545C23C48455CC /* [CP] Check Pods Manifest.lock */,
+				6F6B9CD522CE466A0052BAD0 /* Sources */,
+				6F6B9CD622CE466A0052BAD0 /* Frameworks */,
+				6F6B9CD722CE466A0052BAD0 /* Resources */,
+				4F2C663FA0EEC8FC6F7586E1 /* [CP] Embed Pods Frameworks */,
+				6E16455C982C7D3B38D79A49 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F6B9CDB22CE466A0052BAD0 /* PBXTargetDependency */,
+			);
+			name = MeepTestMapsTests;
+			productName = MeepTestMapsTests;
+			productReference = 6F6B9CD922CE466A0052BAD0 /* MeepTestMapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6F6B9CE322CE466A0052BAD0 /* MeepTestMapsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6B9CF322CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMapsUITests" */;
+			buildPhases = (
+				65442AF5EC6ECD9420B007B4 /* [CP] Check Pods Manifest.lock */,
+				6F6B9CE022CE466A0052BAD0 /* Sources */,
+				6F6B9CE122CE466A0052BAD0 /* Frameworks */,
+				6F6B9CE222CE466A0052BAD0 /* Resources */,
+				E85F4727BBD46CD3840B08F7 /* [CP] Embed Pods Frameworks */,
+				C0C5598C13795BBC0637B063 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F6B9CE622CE466A0052BAD0 /* PBXTargetDependency */,
+			);
+			name = MeepTestMapsUITests;
+			productName = MeepTestMapsUITests;
+			productReference = 6F6B9CE422CE466A0052BAD0 /* MeepTestMapsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F6B9CBD22CE46680052BAD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Miquel Bosch";
+				TargetAttributes = {
+					6F6B9CC422CE46680052BAD0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6F6B9CD822CE466A0052BAD0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6F6B9CC422CE46680052BAD0;
+					};
+					6F6B9CE322CE466A0052BAD0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6F6B9CC422CE46680052BAD0;
+					};
+				};
+			};
+			buildConfigurationList = 6F6B9CC022CE46680052BAD0 /* Build configuration list for PBXProject "MeepTestMaps" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F6B9CBC22CE46680052BAD0;
+			productRefGroup = 6F6B9CC622CE46680052BAD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F6B9CC422CE46680052BAD0 /* MeepTestMaps */,
+				6F6B9CD822CE466A0052BAD0 /* MeepTestMapsTests */,
+				6F6B9CE322CE466A0052BAD0 /* MeepTestMapsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F6B9CC322CE46680052BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6B9CD322CE466A0052BAD0 /* LaunchScreen.storyboard in Resources */,
+				6F6B9D0822CE48CA0052BAD0 /* MapScreenViewController.xib in Resources */,
+				6F6B9CD022CE466A0052BAD0 /* Assets.xcassets in Resources */,
+				6F6B9D1422CE4A820052BAD0 /* ErrorView.xib in Resources */,
+				6F6B9CCE22CE46680052BAD0 /* Main.storyboard in Resources */,
+				6F6B9D1022CE4A650052BAD0 /* MapView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CD722CE466A0052BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CE222CE466A0052BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		065AB80A2A545C23C48455CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeepTestMapsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		477255C3CC7887E3EFCFFFBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2C663FA0EEC8FC6F7586E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMapsTests/Pods-MeepTestMapsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65442AF5EC6ECD9420B007B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeepTestMapsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E16455C982C7D3B38D79A49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMapsTests/Pods-MeepTestMapsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C5598C13795BBC0637B063 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMapsUITests/Pods-MeepTestMapsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7B69151BE668D92B5C6A256 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMaps/Pods-MeepTestMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E49E979224ACB9B133F4D90E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeepTestMaps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E85F4727BBD46CD3840B08F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeepTestMapsUITests/Pods-MeepTestMapsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F6B9CC122CE46680052BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6B9D1822CE4F5F0052BAD0 /* LocationInfo.swift in Sources */,
+				6F6B9CCB22CE46680052BAD0 /* ViewController.swift in Sources */,
+				6F6B9D0E22CE4A5A0052BAD0 /* MapView.swift in Sources */,
+				6F6B9D1B22CE508E0052BAD0 /* ServicesManager.swift in Sources */,
+				6F6B9CC922CE46680052BAD0 /* AppDelegate.swift in Sources */,
+				6F6B9D0022CE48080052BAD0 /* UIColor+extensions.swift in Sources */,
+				6F6B9D0422CE48510052BAD0 /* BaseNavigationController.swift in Sources */,
+				6F6B9D1622CE4F390052BAD0 /* MapScreenViewModel.swift in Sources */,
+				6F6B9D0B22CE49280052BAD0 /* Constants.swift in Sources */,
+				6F6B9D0222CE482E0052BAD0 /* Protocols.swift in Sources */,
+				6F6B9D1222CE4A780052BAD0 /* ErrorView.swift in Sources */,
+				6F6B9D0722CE48CA0052BAD0 /* MapScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CD522CE466A0052BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6B9CDE22CE466A0052BAD0 /* MeepTestMapsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6B9CE022CE466A0052BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6B9CE922CE466A0052BAD0 /* MeepTestMapsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F6B9CDB22CE466A0052BAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F6B9CC422CE46680052BAD0 /* MeepTestMaps */;
+			targetProxy = 6F6B9CDA22CE466A0052BAD0 /* PBXContainerItemProxy */;
+		};
+		6F6B9CE622CE466A0052BAD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F6B9CC422CE46680052BAD0 /* MeepTestMaps */;
+			targetProxy = 6F6B9CE522CE466A0052BAD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F6B9CCC22CE46680052BAD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F6B9CCD22CE46680052BAD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F6B9CD122CE466A0052BAD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F6B9CD222CE466A0052BAD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F6B9CEB22CE466A0052BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F6B9CEC22CE466A0052BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F6B9CEE22CE466A0052BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79204F6D88A355A8ED25E28B /* Pods-MeepTestMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F6B9CEF22CE466A0052BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2A45CCE992B06500D181BF /* Pods-MeepTestMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6F6B9CF122CE466A0052BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F3339BD9DEF44AA7745A91 /* Pods-MeepTestMapsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeepTestMaps.app/MeepTestMaps";
+			};
+			name = Debug;
+		};
+		6F6B9CF222CE466A0052BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6064933DC1EC8AC549CEB6E /* Pods-MeepTestMapsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeepTestMaps.app/MeepTestMaps";
+			};
+			name = Release;
+		};
+		6F6B9CF422CE466A0052BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4728B1B6D5725F30B565EF54 /* Pods-MeepTestMapsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeepTestMaps;
+			};
+			name = Debug;
+		};
+		6F6B9CF522CE466A0052BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6999A777638BD988F73637B /* Pods-MeepTestMapsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2MGZ93L9RY;
+				INFOPLIST_FILE = MeepTestMapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = miquel.bosch.Meep.MeepTestMapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeepTestMaps;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F6B9CC022CE46680052BAD0 /* Build configuration list for PBXProject "MeepTestMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6B9CEB22CE466A0052BAD0 /* Debug */,
+				6F6B9CEC22CE466A0052BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6B9CED22CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6B9CEE22CE466A0052BAD0 /* Debug */,
+				6F6B9CEF22CE466A0052BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6B9CF022CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6B9CF122CE466A0052BAD0 /* Debug */,
+				6F6B9CF222CE466A0052BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6B9CF322CE466A0052BAD0 /* Build configuration list for PBXNativeTarget "MeepTestMapsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6B9CF422CE466A0052BAD0 /* Debug */,
+				6F6B9CF522CE466A0052BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F6B9CBD22CE46680052BAD0 /* Project object */;
+}
