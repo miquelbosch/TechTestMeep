@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,9 +14,23 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MapView" customModule="MeepTestMaps" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.56470475840000001" green="1" blue="0.40081320409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNt-Di-ppC" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uNt-Di-ppC" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Aww-Vc-s6v"/>
+                <constraint firstAttribute="bottom" secondItem="uNt-Di-ppC" secondAttribute="bottom" id="BNF-Sk-EhJ"/>
+                <constraint firstItem="uNt-Di-ppC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Da5-Ws-jJd"/>
+                <constraint firstItem="uNt-Di-ppC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="njI-Fm-xK3"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="mapView" destination="uNt-Di-ppC" id="1fI-Wu-tsA"/>
+            </connections>
             <point key="canvasLocation" x="138.40000000000001" y="51.27436281859071"/>
         </view>
     </objects>

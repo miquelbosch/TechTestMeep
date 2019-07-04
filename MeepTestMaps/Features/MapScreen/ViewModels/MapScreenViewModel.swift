@@ -12,14 +12,20 @@ import RxSwift
 class MapScreenViewModel {
   private var networkManager = NetworkManager()
   public var tableDataList = PublishSubject<[LocationInfo]>()
+  public let loadingManager = PublishSubject<LoadingType>()
+  lazy var loadingObservable: Observable<LoadingType> = self.loadingManager.asObservable()
   
   
   public func fetchTransportList() {
+    print(loadingManager)
+    self.loadingManager.onNext(.loadingOn)
     networkManager.getTransportMarkers(success: { jsonResponse in
       //Pintar mapa
+      self.loadingManager.onNext(.loadingOff)
       
     }) { errorType in
       // pintar error
+      self.loadingManager.onNext(.loadingOff)
     }
   }
 }

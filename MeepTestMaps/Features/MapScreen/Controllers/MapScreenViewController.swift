@@ -12,11 +12,36 @@ import RxSwift
 import RxCocoa
 
 class MapScreenViewController: UIViewController, LoadViewProtocol {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      showMap()
-      
+  var mapScreenViewModel = MapScreenViewModel()
+  var disposeBag =  DisposeBag()
+  
+  public let loadingManager = PublishSubject<LoadingType>()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    bindObjects()
+    showMap()
+    mapScreenViewModel.fetchTransportList()
+    
+  }
+  
+  func bindObjects() {
+    
+    mapScreenViewModel
+      .loadingObservable
+      .subscribe(onNext: { [unowned self] haveToShow in
+        if haveToShow == .loadingOn {
+          self.showLoading()
+        }else {
+          self.hideLoading()
+        }
+        }
+      ).disposed(by: disposeBag)
+    
+    
+    
+    
+    
   }
   
   func showLoading() {
@@ -24,7 +49,7 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
   }
   
   func hideLoading() {
-   APESuperHUD.dismissAll(animated: true)
+    APESuperHUD.dismissAll(animated: true)
   }
   
   func showMap() {

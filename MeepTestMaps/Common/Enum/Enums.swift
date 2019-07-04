@@ -13,3 +13,8 @@ enum ErrorType {
   case serverError
   case genericError
 }
+
+enum LoadingType {
+  case loadingOn
+  case loadingOff
+}
