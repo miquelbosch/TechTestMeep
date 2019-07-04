@@ -47,9 +47,11 @@ struct NetworkManager: ServiceManager {
       let model = object["model"].stringValue
       let companyZoneId = object["companyZoneId"].intValue
       let position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-      let maker = GMSMarker(position: position)
+      let marker = GMSMarker(position: position)
+      marker.title = name
+      marker.snippet = model
       
-      let new = LocationInfo(id: id, companyZoneId: companyZoneId, name: name, model: model, maker: maker)
+      let new = LocationInfo(id: id, companyZoneId: companyZoneId, name: name, model: model, maker: marker)
       result.append(new)
     }
     return result
