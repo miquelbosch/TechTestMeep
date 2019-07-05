@@ -17,9 +17,9 @@ class MapScreenViewModel {
   lazy var loadingObservable: Observable<LoadingType> = self.loadingManager.asObservable()
   public let errorManager = PublishSubject<ErrorType>()
   
-  public func fetchTransportList() {
+  public func fetchTransportList(_ params: [String: String]) {
     self.loadingManager.onNext(.loadingOn)
-    networkManager.getTransportMarkers(success: { jsonResponse in
+    networkManager.getTransportMarkers(params: params, success: { jsonResponse in
       self.loadingManager.onNext(.loadingOff)
       self.tableDataList.onNext(jsonResponse)
       

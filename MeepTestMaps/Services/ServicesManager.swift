@@ -19,9 +19,10 @@ protocol ServiceManager {
 struct NetworkManager: ServiceManager {
   let provider = MoyaProvider<TransportsApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
   
-  func getTransportMarkers(success scxd: @escaping ([LocationInfo])->(),
+  func getTransportMarkers(params: [String: String],
+                           success scxd: @escaping ([LocationInfo])->(),
                            failure fail: @escaping (ErrorType)->()) {
-    provider.request(.transport) { result in
+    provider.request(.transport(params)) { result in
       switch result {
       case let .success(response):
         let data = response.data

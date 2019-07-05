@@ -11,7 +11,11 @@ import APESuperHUD
 import RxSwift
 import RxCocoa
 
-class MapScreenViewController: UIViewController, LoadViewProtocol {
+protocol DataSourceMapDelegate {
+  func getData(lowerLeftLatLon: String, upperRightLatLon: String)
+}
+
+class MapScreenViewController: UIViewController, LoadViewProtocol, DataSourceMapDelegate {
   var mapScreenViewModel = MapScreenViewModel()
   var disposeBag =  DisposeBag()
   var mapDelegate: MapView?
@@ -22,7 +26,7 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
     super.viewDidLoad()
     bindObjects()
     showMap()
-    mapScreenViewModel.fetchTransportList()
+    getData(lowerLeftLatLon: Constants.initialLowerLeftLatLon, upperRightLatLon: Constants.initialUpperRightLatLon)
   }
   
   func bindObjects() {
@@ -62,6 +66,7 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
   func showMap() {
     if let mapView = self.loadView("MapView") as? MapView {
       self.view.addSubview(mapView)
+      mapView.dataSourceMapDelegate = self
       mapDelegate = mapView
       mapView.constraintToSuperView(self.view)
     }
@@ -73,5 +78,12 @@ class MapScreenViewController: UIViewController, LoadViewProtocol {
       errorView.constraintToSuperView(self.view)
       errorView.setErrorDescription(errorType)
     }
+  }
+  
+  public func getData(lowerLeftLatLon: String, upperRightLatLon: String) {
+    let params = ["lowerLeftLatLon" : lowerLeftLatLon,
+                  "upperRightLatLon": upperRightLatLon]
+    print("New params: \(params)")
+    mapScreenViewModel.fetchTransportList(params)
   }
 }

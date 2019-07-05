@@ -12,12 +12,12 @@ import Alamofire
 
 
 enum TransportsApi {
-  case transport
+  case transport([String : String])
 }
 
 extension TransportsApi: TargetType {
   var baseURL: URL {
-    guard let url = URL(string: Constants.baseUrl) else { fatalError("Invalid URL Transport Api")   }
+    guard let url = URL(string: Constants.baseUrl) else { fatalError("Invalid URL Transport Api") }
     return url
   }
   
@@ -34,7 +34,12 @@ extension TransportsApi: TargetType {
   }
   
   var task: Task {
-    return .requestParameters(parameters: Constants.params, encoding: URLEncoding.queryString)
+    switch self  {
+    case .transport(let params):
+      return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+//    default:
+//      return .requestParameters(parameters: Constants.params, encoding: URLEncoding.queryString)
+    }
   }
   
   var headers: [String : String]? {

@@ -9,9 +9,10 @@
 import UIKit
 import GoogleMaps
 
-class MapView: UIView {
+class MapView: UIView, CLLocationManagerDelegate, GMSMapViewDelegate {
   @IBOutlet weak var mapView: GMSMapView!
-
+  public var dataSourceMapDelegate: DataSourceMapDelegate!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     initialPosition()
@@ -20,6 +21,7 @@ class MapView: UIView {
   private func initialPosition() {
     let location = GMSCameraPosition(latitude: Constants.initialPosition.lat, longitude: Constants.initialPosition.lon, zoom: 16)
     mapView.animate(to: location)
+    mapView.delegate = self
   }
   
   public func setMakers(_ list: [LocationInfo]) {
@@ -47,4 +49,23 @@ class MapView: UIView {
     }
     return dictColors
   }
+  
+  func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//    print("New Center position")
+//    let latitude = mapView.camera.target.latitude
+//    let longitude = mapView.camera.target.longitude
+//    let centerMapCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    let newMapPosition = mapView.projection.visibleRegion()
+    
+    let bottomLeft: CLLocationCoordinate2D = newMapPosition.nearLeft
+    let upperRight: CLLocationCoordinate2D = newMapPosition.farRight
+
+    dataSourceMapDelegate.getData(lowerLeftLatLon: transformToString(bottomLeft), upperRightLatLon: transformToString(upperRight))
+    //delegate to change position
+  }
+  
+  func transformToString(_ coordinate: CLLocationCoordinate2D) -> String {
+    return "\(coordinate.latitude),\(coordinate.longitude)"
+  }
 }
+
