@@ -26,6 +26,7 @@ class MapView: UIView, CLLocationManagerDelegate, GMSMapViewDelegate {
   
   public func setMakers(_ list: [LocationInfo]) {
     var dictColors = createDictColors(list)
+    mapView.clear()
     
     _ = list.map {  $0.maker.map = mapView
       $0.maker.icon =  dictColors[$0.companyZoneId]
